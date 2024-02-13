@@ -12,15 +12,15 @@ import com.fernandookamura.workshopmongo.domain.User;
 import com.fernandookamura.workshopmongo.services.UserService;
 
 @RestController
-@RequestMapping(value = "/users")
+@RequestMapping(value="/users")
 public class UserResource {
 
 	@Autowired
 	private UserService service;
 	
 	@GetMapping
-	public ResponseEntity<List<User>>findAll() {
-		List<User> list = service.findAll();
-		return ResponseEntity.ok().body(list);
+	public ResponseEntity<List<User>> findAll() {
+	List<User> list = service.findAll();
+	return ResponseEntity.ok().body(list);
 }
 }
